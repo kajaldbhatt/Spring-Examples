@@ -22,7 +22,7 @@ public class JobSeekerController {
 	@Autowired
     private JobSeekerDAO jobSeekerDAO;
 	
-	@RequestMapping(value="/pizzavalley/{jobSeekerId}", method = RequestMethod.GET)
+	@RequestMapping(value="/jobseeker/{jobSeekerId}", method = RequestMethod.GET)
     public String getPizza(@PathVariable String jobSeekerId, ModelMap model) {
   
         JobSeeker jobSeeker = jobSeekerDAO.get(Integer.parseInt(jobSeekerId));
